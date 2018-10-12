@@ -1,24 +1,18 @@
 import sys
 import csv
 
+input_file = sys.argv[1]
 
-def main():
-    pass
-    # print(sys.argv)
+output_file = []
+
+
+def reading(input):
+    with open(input, 'r') as f:
+        temp_file = csv.reader(f)
+        for row in temp_file:
+            output_file.append(row)
+        print(output_file[161])
 
 
 if __name__ == '__main__':
-    main()
-
-
-input_file = sys.argv[1]
-
-with open(input_file, 'r') as f:
-    output_file = csv.reader(f, delimiter=',')
-    line_count = 0
-    for row in output_file:
-        if line_count == 162:
-            print(row)
-            line_count += 1
-        else:
-            line_count += 1
+    reading(input_file)
