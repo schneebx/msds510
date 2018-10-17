@@ -1,5 +1,3 @@
-import sys
-import csv
 from msds510.utils.date_functions import get_date_joined, days_since_joined
 
 records = [dict(year='1988', intro='Jun-88'),

@@ -1,8 +1,12 @@
 import sys
 import csv
 
-
-input_file = sys.argv[1]
+try:
+    input_file = sys.argv[1]
+except IndexError as err_log:
+    print('Error:', err_log)
+    print('Requires 1 input for the input file.')
+    sys.exit()
 
 
 def reading(input):
